@@ -1,0 +1,17 @@
+{% extends "_base.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+{% for post in posts %}
+<h1>{{ post.title }}</h1>
+    <h2>{{ post.author }}</h2>
+    <h3>{{ post.content }}</h3>
+    <h4>{{ post.created }}</h4>
+    <h4>{{ post.edited }}</h4>
+    <a href="{{ post.get_absolute_url }}">More Details</a>
+{% endfor %}
+
+{% endblock %}
